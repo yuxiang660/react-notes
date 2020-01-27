@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    "react-hooks",
   ],
   rules: {
     "no-param-reassign": "off",
@@ -32,5 +33,7 @@ module.exports = {
     "react/jsx-filename-extension": "off",
     'react/jsx-one-expression-per-line': "off",
     'react/button-has-type': "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
 };
