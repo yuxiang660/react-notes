@@ -21,16 +21,23 @@
     `{state}`
 - 更新State变量
     利用setXXX和XXX变量直接操作，如`setXXX(...)`
+
 ## Effect Hook
-    - 副作用函数
-    - 作用类似类组件中的`componentDidMount`, `componentDidUpdate`, `componentWillUnmount`等
-    - React会在每次渲染后调用此函数
-    - 可以返回一个函数，在组件销毁时被调用
+- 在函数组件中执行副作用操作，例如状态变化了会引起此副作用
+- 作用类似类组件中的`componentDidMount`, `componentDidUpdate`, `componentWillUnmount`等
+- React会在每次渲染后调用此函数
+- 可以返回一个函数，在组件销毁时被调用
+* 无需清除的effect
+    - 在每次渲染之后执行
+    - 在函数组件内定义，可以直接访问函数的state变量
+* 需要清除的effect
+    - 对应`componentDidMount`和`componentWillUnmount`
+    - effect返回函数会在组件卸载时被执行
 
 # JS语法
 # Template literals
-    - [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
-    - Example:
-    ```
-    `string text ${expression} string text`
-    ```
+- [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- Example:
+```
+`string text ${expression} string text`
+```

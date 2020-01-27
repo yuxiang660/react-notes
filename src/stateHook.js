@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const StateHook = (props) => {
+const StateHook = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <p>StateHook - You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>
-        Click me
+        Test StateHook
       </button>
     </div>
   );
